@@ -22,11 +22,8 @@ translator = GoogleTranslator(source="auto", target="uz")
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer(
-        welcome_text = (
-    f"🐻 Hey, {message.from_user.first_name}!\n\n"
-    "📢 Ko'proq kulgu va ma'lumot uchun /help ni bosing!"
-)
-
+        f"🐻 Hey, {message.from_user.first_name}! Salom\n\n"
+        "📢 Ko'proq kulgu va ma'lumot uchun /help ni bosing!"
     )
 
 
