@@ -22,18 +22,24 @@ translator = GoogleTranslator(source="auto", target="uz")
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer(
-        f"Assalomu alaykum {message.from_user.first_name}!\n"
-        "Xush kelibsiz.\nKo'proq ma'lumot olish uchun /help buyrug'ini bosing."
+        welcome_text = (
+    f"🐻 Hey, {message.from_user.first_name}!\n\n"
+    "📢 Ko'proq kulgu va ma'lumot uchun /help ni bosing!"
+)
+
     )
 
 
 @dp.message(Command("help"))
 async def command(message: Message):
     await message.reply(
-        "Bu bot 3 xil vazifa uchun mo'jalangan:"
-        "\nWikipediya qidirish: /wiki <so'z>"
-        "\nTarjima: /dic <so'z>"
-        "\nEcho: /echo <matn>"
+        info_text = (
+    "🎯 Bu bot 3 xil vazifa uchun mo'ljallangan:\n\n"
+    "📚 *Wikipediya qidirish:* `/wiki <so'z>`\n"
+    "🌍 *Tarjima:* `/dic <so'z>`\n"
+    "🗣️ *Echo (takrorlash):* `/echo <matn>`"
+)
+
     )
 
 
