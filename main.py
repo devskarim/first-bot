@@ -29,15 +29,12 @@ async def start(message: Message):
 
 @dp.message(Command("help"))
 async def command(message: Message):
-    await message.reply(
-        info_text = (
-    "🎯 Bu bot 3 xil vazifa uchun mo'ljallangan:\n\n"
-    "📚 *Wikipediya qidirish:* `/wiki <so'z>`\n"
-    "🌍 *Tarjima:* `/dic <so'z>`\n"
-    "🗣️ *Echo (takrorlash):* `/echo <matn>`"
-)
-
-    )
+    await message.reply(f"""
+    🎯 Bu bot 3 xil vazifa uchun mo'ljallangan:\n
+    📚 *Wikipediya qidirish:* /wiki <so'z>\n
+    🌍 *Tarjima:* /dic <so'z>\n
+    🗣️ *Echo (takrorlash):* /echo <matn>
+""")
 
 
 @dp.message(Command("wiki"))
